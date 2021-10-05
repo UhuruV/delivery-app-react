@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Card, Row, Col } from "react-bootstrap";
+import axios from 'axios'
+
 
 const DeliveryTracking = () => {
+ const [ data, setdata] = useState();
+ const [orderNumber, setOrderNumber] = useState('');
+
+ useEffect(()=>{
+   const trackDelivery = async ()=>{
+     const response = await axios.get(
+       `https://api.sendyit.com/v2/orders/${orderNumber}`
+     );
+     setOrderNumber(response);
+   }
+
+   trackDelivery();
+ },[orderNumber]);
+
   return (
     <div className="sign-up">
       <div className="delivery">
