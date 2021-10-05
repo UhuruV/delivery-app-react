@@ -17,8 +17,9 @@ const About = () => {
           </Col>
         </Row>
 
+{/* <div className="col-xs-12 col-sm-6"> */}
         <Row className="m-5" style={{ textAlign:"left" }}>
-        <Col xs={6}>
+        <Col xs={6} className="about-paragraph">
           <h3 className="abt-h3 p-3">About US</h3>
             <p className="p-3" id="para">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
@@ -38,7 +39,7 @@ const About = () => {
         </Button>
           </Col>
           <Col xs={6}>
-            <Image src={image} rounded style={{ width: "100%" }} />
+            <Image src={image} rounded style={{ width: "100%",height: "100%" }} className="about-image" />
           </Col>
         
         </Row>
@@ -66,6 +67,7 @@ const About = () => {
               </p>
             </Col>
           </Row>
+          
         </Container>
     </>
   );

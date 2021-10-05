@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Form, Row, Col, Button, Card, FormControl } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import * as Icon  from 'react-bootstrap-icons'
 import * as sweetalert from "sweetalert";
 import { useHistory } from "react-router";
+import axios from 'axios';
 
 const DeliveryDetails = () => {
   const history = useHistory();
@@ -20,6 +21,16 @@ const DeliveryDetails = () => {
     onClickContinue();
     history.push("/tracking");
   };
+
+  useEffect(()=>{
+    const fetchData = async () =>{
+      const result = await axios.post(
+        `https://api.sendyit.com/v2/orders`
+      );
+      setDeliveryData(results);
+    }
+    fetchData();
+  },[]);
 
   return (
     <div>

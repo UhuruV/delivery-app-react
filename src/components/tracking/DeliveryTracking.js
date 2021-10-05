@@ -1,7 +1,21 @@
 import React from "react";
 import { Card, Row, Col } from "react-bootstrap";
+import { useEffect, useState } from 'react';
 
 const DeliveryTracking = () => {
+  const [deliveryData, setDeliveryData] = useEffect('');
+
+  useEffect(()=>{
+    const fetchData = async () =>{
+      const result = await fetch(
+        `https://api.sendyit.com/v2/orders/${orderNumber}`
+      );
+      setDeliveryData(results);
+    }
+    fetchData();
+  },[]);
+
+
   return (
     <div className="sign-up">
       <div className="delivery">

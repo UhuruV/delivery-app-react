@@ -15,7 +15,7 @@ const HomePage = () => {
         </Col>
         <Col xs={6} >
           {" "}
-          <Image src={image} rounded style={{ width: "100%" }} />
+          <Image src={image} rounded style={{ width: "100%" }} className="home-page-image" />
         </Col>
       </Row>
 
@@ -28,8 +28,8 @@ const HomePage = () => {
         </Row> */}
       {/* </Container> */}
 
-      <Container>
-        <Row className="m-5">
+      <Container className="value-container">
+        <Row className="m-5" id="value-row">
           <Col xs={6} md={4}>
             <div className="element1-home">
               <h3>Fast Delivery</h3>
@@ -58,7 +58,7 @@ const HomePage = () => {
               </p>
             </div>
           </Col>
-          <Col xs={6} md={4}>
+          <Col xs={6} md={4} className="div-three">
             <div className="element3-home">
               <h3>Affordable</h3>
               <p>

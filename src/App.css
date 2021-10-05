@@ -1,6 +1,12 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   /* overflow-y: hidden; Hide vertical scrollbar */
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
 
 .App {
@@ -46,16 +52,15 @@ body {
 .navbar-dark .navbar-nav .nav-link:after {
   color: #000 !important;
 }
-.btn-warning{
+.btn-warning {
   background-color: #0a142f !important;
   border-color: #0a142f !important;
   border-radius: 20px;
 }
 
-#nav-link-sign-up{
+#nav-link-sign-up {
   padding: 15px;
 }
-
 
 /* Homepage */
 
@@ -73,7 +78,7 @@ body {
   width: 40%;
   margin: 2% auto;
 }
-#homepage-second-div{
+#homepage-second-div {
   width: 35%;
   margin: 10% auto;
 }
@@ -153,8 +158,8 @@ nav.navbar.navbar-expand.navbar-dark.bg-dark.fixed-top {
 
 /* About section */
 .about {
-  background-image: url(../src/components/about/assets/delivery.jpg) ,
-  linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+  background-image: url(../src/components/about/assets/delivery.jpg),
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 0.9;
@@ -225,44 +230,47 @@ h1 {
 }
 
 /* delivery component */
-.small, .medium, .large{
+.small,
+.medium,
+.large {
   padding: 0.8%;
   color: #fff;
 }
-.delivery-para{
-    padding-top: 10px;
+.delivery-para {
+  padding-top: 10px;
 }
-.small{
+.small {
   background-color: #0a142f;
   border-radius: 5px 0 0 5px;
 }
-.medium, .large{
+.medium,
+.large {
   background: #ffa724;
 }
-.large{
+.large {
   border-radius: 0 5px 5px 0;
 }
 
-.delivery-size{
+.delivery-size {
   width: 96%;
   margin: auto;
 }
-.delivery-details{
+.delivery-details {
   width: 100%;
   margin: 2% auto;
   border-radius: 5px;
   padding: 0.6%;
-  background-color: #E8E8E8;
+  background-color: #e8e8e8;
 }
 
-.btn-continue{
+.btn-continue {
   background: #ffa724 !important;
   color: #fff !important;
   width: 100%;
 }
 
 /* Tracking */
-.delivery{
+.delivery {
   width: 30%;
   margin: 6% auto;
 }
@@ -271,11 +279,11 @@ h1 {
 }
 
 /* Link */
-a{
+a {
   text-decoration: none;
 }
 
-.input-group-text{
+.input-group-text {
   background: #ffa724 !important;
 }
 @keyframes App-logo-spin {
@@ -285,4 +293,62 @@ a{
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .home-page-image {
+    height: 100%;
+    width: 100%;
+  }
+  .div-three {
+    margin-top: 5%;
+    display: block;
+  	margin-left: auto;
+	margin-right: auto;
+  }
+  .value-container {
+    width: 100%;
+  }
+  #value-row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .element1-home,
+  .element2-home {
+    width: 100% !important;
+  }
+  .about-image{
+    display: none;
+  }
+  .about-paragraph{
+    width: 100%;
+    margin: 2% auto;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .home-page-image {
+    height: 100%;
+    width: 100%;
+  }
+  .div-three {
+    margin-top: 5%;
+    display: block;
+  	margin-left: auto;
+	margin-right: auto;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }
