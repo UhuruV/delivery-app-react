@@ -12,7 +12,7 @@ const DeliveryTracking = () => {
      const response = await axios.get(
        `https://api.sendyit.com/v2/orders/${orderNumber}`
      );
-     setOrderNumber(response);
+     setOrderNumber(response.data);
    }
 
    trackDelivery();

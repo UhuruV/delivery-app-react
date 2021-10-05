@@ -1,12 +1,14 @@
-import React from "react";
+import React,{ useEffect,useState } from "react";
 import { Form, Row, Col, Button, Card, FormControl } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import * as Icon  from 'react-bootstrap-icons'
 import * as sweetalert from "sweetalert";
 import { useHistory } from "react-router";
+import axios from "axios";
 
 const DeliveryDetails = () => {
   const history = useHistory();
+  const [ orderDetails, setOrderDetails ] = useState('')
 
   const onClickContinue = () => {
     sweetalert({
@@ -20,6 +22,17 @@ const DeliveryDetails = () => {
     onClickContinue();
     history.push("/tracking");
   };
+
+  useEffect(()=>{
+    const deliveryDetails = async ()=>{
+      const response = await axios.get(
+        `https://api.sendyit.com/v2/orders`
+      );
+      setOrderDetails(response.data);
+    }
+ 
+    deliveryDetails();
+  },[]);
 
   return (
     <div>
