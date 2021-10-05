@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 
 const DeliveryTracking = () => {
   const [deliveryData, setDeliveryData] = useEffect('');
+  const [orderNumber, setOrderNumber ] = useState('');
 
   useEffect(()=>{
     const fetchData = async () =>{
@@ -13,7 +14,7 @@ const DeliveryTracking = () => {
       setDeliveryData(results);
     }
     fetchData();
-  },[]);
+  },[orderNumber]);
 
 
   return (

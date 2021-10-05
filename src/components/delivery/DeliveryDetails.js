@@ -24,8 +24,15 @@ const DeliveryDetails = () => {
 
   useEffect(()=>{
     const fetchData = async () =>{
+      const data ={
+        pricing_uuid: "string",
+        carrier_type: 0,
+        payment_option: 0,
+        note: "string",
+        schedule_time: "string"
+        }
       const result = await axios.post(
-        `https://api.sendyit.com/v2/orders`
+        `https://api.sendyit.com/v2/orders`,data
       );
       setDeliveryData(results);
     }
