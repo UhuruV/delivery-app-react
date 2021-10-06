@@ -3,7 +3,7 @@ import { Card, Row, Col } from "react-bootstrap";
 import { useEffect, useState } from 'react';
 
 const DeliveryTracking = () => {
-  const [deliveryData, setDeliveryData] = useEffect('');
+  const [deliveryData, setDeliveryData] = useState('');
   const [orderNumber, setOrderNumber ] = useState('');
 
   useEffect(()=>{
