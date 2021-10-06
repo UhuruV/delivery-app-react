@@ -8,7 +8,7 @@ const DeliveryTracking = () => {
 
   useEffect(()=>{
     const fetchData = async () =>{
-      const result = await fetch(
+      const results = await fetch(
         `https://api.sendyit.com/v2/orders/${orderNumber}`
       );
       setDeliveryData(results);
